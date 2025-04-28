@@ -19,10 +19,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t strapi1 ./strapi-app
-
-      - name: tag Docker image
-        run: docker tag strapi1 jagadhee/strapi1:latest1
+        run: docker build -t jagadhee/myappdemo:1 ./my-project
 
       - name: Push Docker image
-        run: docker push jagadhee/strapi1:latest1
+        run: docker push jagadhee/myappdemo:1
