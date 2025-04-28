@@ -8,7 +8,7 @@ variable "instance_type" {
 
 variable "key_name" {
   description = "SSH key pair name to access the instance"
-  default="strapinew"
+  default="Momos"
 }
 
 

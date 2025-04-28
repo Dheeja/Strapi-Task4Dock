@@ -18,5 +18,5 @@ usermod -aG docker ec2-user
 # echo "<DOCKER_PASSWORD>" | docker login -u "<DOCKER_USERNAME>" --password-stdin
 
 # Pull and run your Docker container
-docker pull ananya117/myappdemo:1
-docker run -d -p 1337:1337 ananya117/myappdemo:1
+sudo docker pull jagadhee/strapi1:latest1
+sudo docker run -d -p 1337:1337 -e HOST=0.0.0.0 jagadhee/strapi1:latest1

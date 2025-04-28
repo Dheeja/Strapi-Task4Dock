@@ -1,22 +1,22 @@
 # VPC
-resource "aws_vpc" "main" {
+resource "aws_vpc" "main3" {
   cidr_block = "10.0.0.0/16"
 }
 
 # Subnet
 resource "aws_subnet" "main" {
-  vpc_id     = aws_vpc.main.id
+  vpc_id     = aws_vpc.main3.id
   cidr_block = "10.0.1.0/24"
 }
 
 # Internet Gateway
 resource "aws_internet_gateway" "gw" {
-  vpc_id = aws_vpc.main.id
+  vpc_id = aws_vpc.main3.id
 }
 
 # Route Table
 resource "aws_route_table" "rt" {
-  vpc_id = aws_vpc.main.id
+  vpc_id = aws_vpc.main3.id
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.gw.id
@@ -33,7 +33,7 @@ resource "aws_route_table_association" "a" {
 resource "aws_security_group" "allow_ssh_http" {
   name        = "allow_ssh_http"
   description = "Allow SSH and HTTP"
-  vpc_id      = aws_vpc.main.id
+  vpc_id      = aws_vpc.main3.id
 
   ingress {
     from_port   = 22
