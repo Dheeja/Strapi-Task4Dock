@@ -12,7 +12,7 @@ RUN npm install
 COPY . .
 
 # Copy .env file explicitly
-COPY ./Task1.env .env
+COPY .env .env
 
 # Build Strapi Admin Panel
 RUN npm run build
