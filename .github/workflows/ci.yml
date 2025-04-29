@@ -19,7 +19,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t jagadhee/myapp:2 ./Task1
+        run: docker build -t myapp ./Task1
+
+      - name: tag Docker image
+        run: docker tag myapp jagadhee/myapp:2
 
       - name: Push Docker image
         run: docker push jagadhee/myapp:2
