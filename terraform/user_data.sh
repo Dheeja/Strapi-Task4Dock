@@ -17,6 +17,6 @@ usermod -aG docker ec2-user
 # Login to Docker Hub (optional – requires credentials set up)
 # echo "<DOCKER_PASSWORD>" | docker login -u "<DOCKER_USERNAME>" --password-stdin
 
-# Pull and run your Docker container
-sudo docker pull jagadhee/myappdemo:1
-sudo docker run -d -p 1337:1337 -e HOST=0.0.0.0 jagadhee/myappdemo:1
+# Pull and run your Docker image
+sudo docker pull ramankms/strapi-app:latest
+sudo docker run -d -p 1337:1337 -e HOST=0.0.0.0 ramankms/strapi-app:latest
