@@ -18,5 +18,5 @@ usermod -aG docker ec2-user
 # echo "<DOCKER_PASSWORD>" | docker login -u "<DOCKER_USERNAME>" --password-stdin
 
 # Pull and run your Docker image
-sudo docker pull ramankms/strapi-app:latest
-sudo docker run -d -p 1337:1337 -e HOST=0.0.0.0 ramankms/strapi-app:latest
+sudo docker pull jagadhee/myapp:2
+sudo docker run -d -p 1500:1337 -e HOST=0.0.0.0 jagadhee/myapp:2
