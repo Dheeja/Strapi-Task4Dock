@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t admin-app ./strapi-app
+        run: docker build -t myapp ./strapi-app
 
       - name: tag Docker image
         run: docker tag myapp jagadhee/myapp:2
