@@ -12,7 +12,7 @@ RUN npm install
 COPY . .
 
 # Copy .env file explicitly
-COPY .env .env
+COPY .env ./strapi-app/.env
 
 # Build Strapi Admin Panel
 RUN npm run build
